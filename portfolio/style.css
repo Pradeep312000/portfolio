@@ -1,0 +1,80 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Hero */
+#hero {
+    background: url('assets/images/hero.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+}
+
+/* Skills */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill img {
+    width: 50px;
+    margin-bottom: 5px;
+}
+
+/* Projects */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    text-align: left;
+}
+
+/* Social Icons */
+.social-icons img {
+    width: 40px;
+    margin: 0 10px;
+}
