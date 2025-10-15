@@ -74,6 +74,31 @@ p {
 .btn:hover {
   background-color: #ff007f;
 }
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* New Download Resume Button */
+.btn-download {
+    background: linear-gradient(45deg, #FF6B6B, #FFD93D, #6BCB77);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-download:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
 
 /* SKILLS */
 .skills-container {
