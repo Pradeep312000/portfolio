@@ -22,8 +22,8 @@ section {
 }
 
 .profile-circle {
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   overflow: hidden;
   border: 3px solid #fff;
@@ -160,8 +160,8 @@ p {
 }
 
 .contact-item img {
-  width: 10px;
-  height: 10px;
+  width: 30px;
+  height: 30px;
 }
 
 .contact-item:hover {
