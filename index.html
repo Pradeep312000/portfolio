@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,16 +8,55 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
   body { font-family: 'Montserrat', sans-serif; }
-  /* Hero animations */
-  @keyframes bounce { 0%,20%,50%,80%,100%{transform:translateY(0);} 40%{transform:translateY(-20px);} 60%{transform:translateY(-10px);} }
-  @keyframes colorChange { 0%{color:#ff6b6b;} 25%{color:#feca57;} 50%{color:#1dd1a1;} 75%{color:#54a0ff;} 100%{color:#ff9ff3;} }
-  @keyframes gradientBG { 0%{background-position:0% 50%;} 50%{background-position:100% 50%;} 100%{background-position:0% 50%;} }
-  .hero-bg { background: linear-gradient(135deg,#f6d365,#fda085,#a18cd1,#fbc2eb); background-size: 400% 400%; animation: gradientBG 15s ease infinite; }
-  .profile-img { animation: bounce 2s infinite; border:5px solid white; box-shadow:0 8px 20px rgba(0,0,0,0.3);}
-  .name-animate { animation: colorChange 5s infinite alternate; }
+
+  /* Hero bounce animation */
+  @keyframes bounce { 
+    0%,20%,50%,80%,100%{transform:translateY(0);} 
+    40%{transform:translateY(-20px);} 
+    60%{transform:translateY(-10px);} 
+  }
+
+  /* Animated gradient for name */
+  @keyframes colorChange { 
+    0%{color:#ff6b6b;} 25%{color:#feca57;} 50%{color:#1dd1a1;} 75%{color:#54a0ff;} 100%{color:#ff9ff3;} 
+  }
+
+  /* Animated background gradient */
+  @keyframes gradientBG { 
+    0%{background-position:0% 50%;} 50%{background-position:100% 50%;} 100%{background-position:0% 50%;} 
+  }
+
+  /* Hero section background */
+  .hero-bg { 
+    background: linear-gradient(135deg,#f6d365,#fda085,#a18cd1,#fbc2eb); 
+    background-size: 400% 400%; 
+    animation: gradientBG 15s ease infinite; 
+  }
+
+  /* Profile image bounce */
+  .profile-img { 
+    animation: bounce 2s infinite; 
+    border:5px solid white; 
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+  }
+
+  /* Name color animation */
+  .name-animate { 
+    animation: colorChange 5s infinite alternate; 
+  }
+
+  /* Skill icon floating animation */
+  @keyframes float { 
+    0%,100%{transform:translateY(0);} 
+    50%{transform:translateY(-10px);} 
+  }
+  .skill-icon { 
+    animation: float 3s ease-in-out infinite;
+  }
+
 </style>
 </head>
-<body class="scroll-smooth">
+<body>
 
 <!-- NAVBAR -->
 <nav class="fixed w-full bg-white shadow-md z-50">
@@ -34,8 +73,10 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero-bg h-screen flex flex-col justify-center items-center text-center text-white px-4">
-  <img src="assets/myimage.jpg" alt="Pradeep Shane" class="w-40 h-40 rounded-full profile-img mb-6">
+<section id="hero" class="hero-bg h-screen flex flex-col justify-center items-center text-center text-white px-4">
+  <div class="w-44 h-44 rounded-full border-4 border-white overflow-hidden profile-img mb-6">
+    <img src="assets/images/myimage.jpg" alt="Pradeep Shane" class="w-full h-full object-cover">
+  </div>
   <h1 class="text-5xl md:text-6xl font-bold mb-4 name-animate">Pradeep Shane</h1>
   <p class="text-xl md:text-2xl mb-8">Cloud & DevOps Engineer | AWS, Terraform, Jenkins, Docker, Kubernetes</p>
   <a href="#projects" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">View My Work</a>
@@ -53,23 +94,30 @@
 <section id="skills" class="py-20 bg-gray-100 px-4">
   <h2 class="text-3xl font-bold text-center mb-12">Skills</h2>
   <div class="flex flex-wrap justify-center gap-8">
-    <div class="flex flex-col items-center transform hover:scale-110 transition duration-300">
-      <img src="assets/icons/aws.svg" class="w-16 h-16 mb-2" alt="AWS"><p>AWS</p>
+    <!-- Skill Icons -->
+    <div class="w-24 h-24 flex items-center justify-center rounded-full bg-white shadow-md skill-icon hover:scale-110 transition duration-300">
+      <img src="assets/icons/aws-svgrepo-com.svg" alt="AWS" class="w-12 h-12">
     </div>
-    <div class="flex flex-col items-center transform hover:scale-110 transition duration-300">
-      <img src="assets/icons/terraform.svg" class="w-16 h-16 mb-2" alt="Terraform"><p>Terraform</p>
+    <div class="w-24 h-24 flex items-center justify-center rounded-full bg-white shadow-md skill-icon hover:scale-110 transition duration-300">
+      <img src="assets/icons/azure-opened-svgrepo-com.svg" alt="Azure" class="w-12 h-12">
     </div>
-    <div class="flex flex-col items-center transform hover:scale-110 transition duration-300">
-      <img src="assets/icons/docker.svg" class="w-16 h-16 mb-2" alt="Docker"><p>Docker</p>
+    <div class="w-24 h-24 flex items-center justify-center rounded-full bg-white shadow-md skill-icon hover:scale-110 transition duration-300">
+      <img src="assets/icons/docker-svgrepo-com.svg" alt="Docker" class="w-12 h-12">
     </div>
-    <div class="flex flex-col items-center transform hover:scale-110 transition duration-300">
-      <img src="assets/icons/kubernetes.svg" class="w-16 h-16 mb-2" alt="Kubernetes"><p>Kubernetes</p>
+    <div class="w-24 h-24 flex items-center justify-center rounded-full bg-white shadow-md skill-icon hover:scale-110 transition duration-300">
+      <img src="assets/icons/github-color-svgrepo-com.svg" alt="GitHub" class="w-12 h-12">
     </div>
-    <div class="flex flex-col items-center transform hover:scale-110 transition duration-300">
-      <img src="assets/icons/jenkins.svg" class="w-16 h-16 mb-2" alt="Jenkins"><p>Jenkins</p>
+    <div class="w-24 h-24 flex items-center justify-center rounded-full bg-white shadow-md skill-icon hover:scale-110 transition duration-300">
+      <img src="assets/icons/kubernetes-svgrepo-com.svg" alt="Kubernetes" class="w-12 h-12">
     </div>
-    <div class="flex flex-col items-center transform hover:scale-110 transition duration-300">
-      <img src="assets/icons/python.svg" class="w-16 h-16 mb-2" alt="Python"><p>Python</p>
+    <div class="w-24 h-24 flex items-center justify-center rounded-full bg-white shadow-md skill-icon hover:scale-110 transition duration-300">
+      <img src="assets/icons/linkedin-icon-2-logo-svgrepo-com.svg" alt="LinkedIn" class="w-12 h-12">
+    </div>
+    <div class="w-24 h-24 flex items-center justify-center rounded-full bg-white shadow-md skill-icon hover:scale-110 transition duration-300">
+      <img src="assets/icons/terraform-svgrepo-com.svg" alt="Terraform" class="w-12 h-12">
+    </div>
+    <div class="w-24 h-24 flex items-center justify-center rounded-full bg-white shadow-md skill-icon hover:scale-110 transition duration-300">
+      <img src="assets/icons/jenkins-svgrepo-com.svg" alt="Jenkins" class="w-12 h-12">
     </div>
   </div>
 </section>
@@ -79,7 +127,7 @@
   <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
   <div class="grid md:grid-cols-2 gap-8">
     <div class="bg-white shadow-lg rounded-lg overflow-hidden transform hover:-translate-y-2 transition">
-      <img src="assets/project1.png" alt="Project 1" class="w-full h-48 object-cover">
+      <img src="assets/images/project1.png" alt="Project 1" class="w-full h-48 object-cover">
       <div class="p-6">
         <h3 class="text-xl font-semibold mb-2">AWS CI/CD Pipeline</h3>
         <p class="mb-4">Built a scalable CI/CD pipeline using Jenkins, GitHub Actions, and Terraform for automated testing and deployment.</p>
@@ -87,7 +135,7 @@
       </div>
     </div>
     <div class="bg-white shadow-lg rounded-lg overflow-hidden transform hover:-translate-y-2 transition">
-      <img src="assets/project2.png" alt="Project 2" class="w-full h-48 object-cover">
+      <img src="assets/images/project2.png" alt="Project 2" class="w-full h-48 object-cover">
       <div class="p-6">
         <h3 class="text-xl font-semibold mb-2">Multi-Cloud Automation</h3>
         <p class="mb-4">Automated AWS and Azure infrastructure provisioning using Terraform and Ansible, reducing deployment time by 40%.</p>
