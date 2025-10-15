@@ -5,69 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pradeep Shane Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-  body { font-family: 'Montserrat', sans-serif; }
-
-  /* Hero bounce animation */
-  @keyframes bounce { 
-    0%,20%,50%,80%,100%{transform:translateY(0);} 
-    40%{transform:translateY(-20px);} 
-    60%{transform:translateY(-10px);} 
-  }
-
-  /* Animated gradient for name */
-  @keyframes colorChange { 
-    0%{color:#ff6b6b;} 25%{color:#feca57;} 50%{color:#1dd1a1;} 75%{color:#54a0ff;} 100%{color:#ff9ff3;} 
-  }
-
-  /* Animated background gradient */
-  @keyframes gradientBG { 
-    0%{background-position:0% 50%;} 50%{background-position:100% 50%;} 100%{background-position:0% 50%;} 
-  }
-
-  /* Hero section background */
-  .hero-bg { 
-    background: linear-gradient(135deg,#f6d365,#fda085,#a18cd1,#fbc2eb); 
-    background-size: 400% 400%; 
-    animation: gradientBG 15s ease infinite; 
-  }
-
-  /* Profile image bounce */
-  .profile-img { 
-    animation: bounce 2s infinite; 
-    border:5px solid white; 
-    box-shadow:0 8px 20px rgba(0,0,0,0.3);
-  }
-
-  /* Name color animation */
-  .name-animate { 
-    animation: colorChange 5s infinite alternate; 
-  }
-
-  /* Skill icon floating animation */
-  @keyframes float { 
-    0%,100%{transform:translateY(0);} 
-    50%{transform:translateY(-10px);} 
-  }
-  .skill-icon { 
-    animation: float 3s ease-in-out infinite;
-  }
-
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- NAVBAR -->
-<nav class="fixed w-full bg-white shadow-md z-50">
+<nav class="fixed w-full bg-gray-900 shadow-md z-50">
   <div class="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">
-    <div class="text-xl font-bold text-blue-600">Pradeep Shane</div>
+    <div class="text-xl font-bold text-blue-400">Pradeep Shane</div>
     <div class="space-x-6 hidden md:flex">
-      <a href="#about" class="hover:text-blue-600">About</a>
-      <a href="#skills" class="hover:text-blue-600">Skills</a>
-      <a href="#projects" class="hover:text-blue-600">Projects</a>
-      <a href="#experience" class="hover:text-blue-600">Experience</a>
-      <a href="#contact" class="hover:text-blue-600">Contact</a>
+      <a href="#about" class="hover:text-blue-400">About</a>
+      <a href="#skills" class="hover:text-blue-400">Skills</a>
+      <a href="#projects" class="hover:text-blue-400">Projects</a>
+      <a href="#experience" class="hover:text-blue-400">Experience</a>
+      <a href="#contact" class="hover:text-blue-400">Contact</a>
     </div>
   </div>
 </nav>
@@ -79,104 +30,101 @@
   </div>
   <h1 class="text-5xl md:text-6xl font-bold mb-4 name-animate">Pradeep Shane</h1>
   <p class="text-xl md:text-2xl mb-8">Cloud & DevOps Engineer | AWS, Terraform, Jenkins, Docker, Kubernetes</p>
-  <a href="#projects" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">View My Work</a>
+  <a href="#projects" class="btn">View My Work</a>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="py-20 px-4 max-w-4xl mx-auto">
-  <h2 class="text-3xl font-bold text-center mb-8">About Me</h2>
-  <p class="text-lg text-center leading-relaxed">
+<section id="about" class="py-20 px-4 max-w-4xl mx-auto dark-section">
+  <h2>About Me</h2>
+  <p>
     I am a Cloud & DevOps Engineer with hands-on experience in automating cloud infrastructure, refactoring applications, and deploying scalable systems on AWS and Azure. Skilled in CI/CD, Terraform, Docker, Kubernetes, Jenkins, and monitoring tools. Passionate about learning and contributing to mission-critical cloud modernization projects.
   </p>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="py-20 bg-gray-100 px-4">
-  <h2 class="text-3xl font-bold text-center mb-12">Skills</h2>
-  <div class="flex flex-wrap justify-center gap-8">
-    <!-- Skill Icons -->
-    <div class="w-24 h-24 flex items-center justify-center rounded-full bg-white shadow-md skill-icon hover:scale-110 transition duration-300">
-      <img src="assets/icons/aws-svgrepo-com.svg" alt="AWS" class="w-12 h-12">
+<section id="skills" class="py-20 px-4 dark-section">
+  <h2>Skills</h2>
+  <div class="skills-container">
+    <div class="skill" data-skill="AWS – 3 years of experience">
+      <img src="assets/icons/aws-svgrepo-com.svg" alt="AWS">
     </div>
-    <div class="w-24 h-24 flex items-center justify-center rounded-full bg-white shadow-md skill-icon hover:scale-110 transition duration-300">
-      <img src="assets/icons/azure-opened-svgrepo-com.svg" alt="Azure" class="w-12 h-12">
+    <div class="skill" data-skill="Azure – 3 years of experience">
+      <img src="assets/icons/azure-opened-svgrepo-com.svg" alt="Azure">
     </div>
-    <div class="w-24 h-24 flex items-center justify-center rounded-full bg-white shadow-md skill-icon hover:scale-110 transition duration-300">
-      <img src="assets/icons/docker-svgrepo-com.svg" alt="Docker" class="w-12 h-12">
+    <div class="skill" data-skill="Docker – 3 years of experience">
+      <img src="assets/icons/docker-svgrepo-com.svg" alt="Docker">
     </div>
-    <div class="w-24 h-24 flex items-center justify-center rounded-full bg-white shadow-md skill-icon hover:scale-110 transition duration-300">
-      <img src="assets/icons/github-color-svgrepo-com.svg" alt="GitHub" class="w-12 h-12">
+    <div class="skill" data-skill="GitHub – 3 years of experience">
+      <img src="assets/icons/github-color-svgrepo-com.svg" alt="GitHub">
     </div>
-    <div class="w-24 h-24 flex items-center justify-center rounded-full bg-white shadow-md skill-icon hover:scale-110 transition duration-300">
-      <img src="assets/icons/kubernetes-svgrepo-com.svg" alt="Kubernetes" class="w-12 h-12">
+    <div class="skill" data-skill="Kubernetes – 3 years of experience">
+      <img src="assets/icons/kubernetes-svgrepo-com.svg" alt="Kubernetes">
     </div>
-    <div class="w-24 h-24 flex items-center justify-center rounded-full bg-white shadow-md skill-icon hover:scale-110 transition duration-300">
-      <img src="assets/icons/linkedin-icon-2-logo-svgrepo-com.svg" alt="LinkedIn" class="w-12 h-12">
+    <div class="skill" data-skill="Terraform – 3 years of experience">
+      <img src="assets/icons/terraform-svgrepo-com.svg" alt="Terraform">
     </div>
-    <div class="w-24 h-24 flex items-center justify-center rounded-full bg-white shadow-md skill-icon hover:scale-110 transition duration-300">
-      <img src="assets/icons/terraform-svgrepo-com.svg" alt="Terraform" class="w-12 h-12">
-    </div>
-    <div class="w-24 h-24 flex items-center justify-center rounded-full bg-white shadow-md skill-icon hover:scale-110 transition duration-300">
-      <img src="assets/icons/jenkins-svgrepo-com.svg" alt="Jenkins" class="w-12 h-12">
+    <div class="skill" data-skill="Jenkins – 3 years of experience">
+      <img src="assets/icons/8-AzG7DP0Z6zIkKPaM.gif" alt="Jenkins">
     </div>
   </div>
+  <div id="skill-tooltip" class="tooltip hidden"></div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="py-20 px-4 max-w-6xl mx-auto">
-  <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
-  <div class="grid md:grid-cols-2 gap-8">
-    <div class="bg-white shadow-lg rounded-lg overflow-hidden transform hover:-translate-y-2 transition">
-      <img src="assets/images/project1.png" alt="Project 1" class="w-full h-48 object-cover">
-      <div class="p-6">
-        <h3 class="text-xl font-semibold mb-2">AWS CI/CD Pipeline</h3>
-        <p class="mb-4">Built a scalable CI/CD pipeline using Jenkins, GitHub Actions, and Terraform for automated testing and deployment.</p>
-        <a href="#" class="text-blue-600 font-semibold hover:underline">View on GitHub</a>
-      </div>
+<section id="projects" class="py-20 px-4 max-w-6xl mx-auto dark-section">
+  <h2>Projects</h2>
+  <div class="projects-container">
+    <div class="project-card">
+      <h3>AWS CI/CD Pipeline</h3>
+      <p>Built a scalable CI/CD pipeline using Jenkins, GitHub Actions, and Terraform for automated testing and deployment.</p>
+      <a href="#" class="btn btn-secondary">View on GitHub</a>
     </div>
-    <div class="bg-white shadow-lg rounded-lg overflow-hidden transform hover:-translate-y-2 transition">
-      <img src="assets/images/project2.png" alt="Project 2" class="w-full h-48 object-cover">
-      <div class="p-6">
-        <h3 class="text-xl font-semibold mb-2">Multi-Cloud Automation</h3>
-        <p class="mb-4">Automated AWS and Azure infrastructure provisioning using Terraform and Ansible, reducing deployment time by 40%.</p>
-        <a href="#" class="text-blue-600 font-semibold hover:underline">View on GitHub</a>
-      </div>
+    <div class="project-card">
+      <h3>Multi-Cloud Automation</h3>
+      <p>Automated AWS and Azure infrastructure provisioning using Terraform and Ansible, reducing deployment time by 40%.</p>
+      <a href="#" class="btn btn-secondary">View on GitHub</a>
     </div>
   </div>
 </section>
 
-<!-- EXPERIENCE & EDUCATION -->
-<section id="experience" class="py-20 bg-gray-100 px-4 max-w-5xl mx-auto">
-  <h2 class="text-3xl font-bold text-center mb-12">Experience & Education</h2>
-  <div class="space-y-6">
-    <div>
-      <h3 class="text-xl font-semibold">Infosys | Cloud & DevOps Engineer</h3>
-      <p class="text-gray-600">March 2022 - Jan 2023 | Hyderabad, India</p>
-      <ul class="list-disc list-inside">
-        <li>Designed and deployed hybrid cloud infrastructure (AWS + Azure).</li>
-        <li>Automated provisioning, patching, and compliance using Terraform and Ansible.</li>
-        <li>Built CI/CD pipelines for microservices using Jenkins and GitHub Actions.</li>
-      </ul>
-    </div>
-    <div>
-      <h3 class="text-xl font-semibold">DePaul University | M.S. in Computer Science</h3>
-      <p class="text-gray-600">Jan 2023 – Mar 2025 | Chicago, IL</p>
-    </div>
+<!-- EXPERIENCE -->
+<section id="experience" class="py-20 px-4 max-w-5xl mx-auto dark-section">
+  <h2>Experience & Education</h2>
+  <div>
+    <h3>Infosys | Cloud & DevOps Engineer</h3>
+    <p>March 2022 - Jan 2023 | Hyderabad, India</p>
+    <ul>
+      <li>Designed and deployed hybrid cloud infrastructure (AWS + Azure).</li>
+      <li>Automated provisioning, patching, and compliance using Terraform and Ansible.</li>
+      <li>Built CI/CD pipelines for microservices using Jenkins and GitHub Actions.</li>
+    </ul>
+  </div>
+  <div>
+    <h3>DePaul University | M.S. in Computer Science</h3>
+    <p>Jan 2023 – Mar 2025 | Chicago, IL</p>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="py-20 px-4 max-w-4xl mx-auto text-center">
-  <h2 class="text-3xl font-bold mb-8">Contact Me</h2>
-  <p class="mb-4">Email: <a href="mailto:kittushane31@gmail.com" class="text-blue-600 hover:underline">kittushane31@gmail.com</a></p>
-  <p class="mb-4">LinkedIn: <a href="https://www.linkedin.com/in/kittushane31" class="text-blue-600 hover:underline">linkedin.com/in/kittushane31</a></p>
-  <p class="mb-4">GitHub: <a href="https://github.com/pradeep312000" class="text-blue-600 hover:underline">github.com/pradeep312000</a></p>
+<section id="contact" class="py-20 px-4 max-w-4xl mx-auto dark-section">
+  <h2>Contact Me</h2>
+  <div class="contact-methods">
+    <a href="mailto:kittushane31@gmail.com">
+      <img src="assets/icons/email-part-2-svgrepo-com.svg" alt="Email"> kittushane31@gmail.com
+    </a>
+    <a href="tel:+18723254682">
+      <img src="assets/icons/phone-call-svgrepo-com.svg" alt="Phone"> +1 872-325-4682
+    </a>
+    <a href="https://www.linkedin.com/in/kittushane31" target="_blank">
+      <img src="assets/icons/linkedin-icon-2-logo-svgrepo-com.svg" alt="LinkedIn"> LinkedIn
+    </a>
+  </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="bg-gray-800 text-white py-6 text-center">
+<footer class="bg-gray-900 text-white py-6 text-center">
   © 2025 Pradeep Shane. All rights reserved.
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
