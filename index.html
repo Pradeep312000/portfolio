@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Pradeep Shane - Cloud & DevOps Engineer Portfolio">
   <meta name="author" content="Pradeep Shane">
-  <meta name="keywords" content="Pradeep Shane, Cloud Engineer, DevOps, AWS, Terraform, Jenkins, Portfolio">
-  <title>Pradeep Shane</title>
-  
+  <title>Pradeep Shane Portfolio</title>
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -16,58 +15,69 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <!-- AOS Animation Library -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
   <!-- Favicon -->
   <link rel="icon" href="assets/myimage.jpg" type="image/png">
 
+  <!-- AOS for scroll animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-    }
-    /* Parallax background for Hero */
-    .hero-bg {
-      background: url('assets/hero-bg.jpg') center/cover fixed no-repeat;
-    }
+    body { font-family: 'Montserrat', sans-serif; }
+    .section-bg { background: linear-gradient(135deg, #1e3c72, #2a5298); }
   </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
 
-  <!-- Hero Section -->
-  <section class="hero-bg h-screen flex flex-col justify-center items-center text-center text-white px-4">
-    <img src="assets/myimage.jpg" alt="Pradeep Shane" class="w-32 h-32 rounded-full mb-6 shadow-xl animate-bounce">
+  <!-- NAVBAR -->
+  <nav class="fixed w-full bg-white shadow-md z-50">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">
+      <div class="text-xl font-bold text-blue-600">Pradeep Shane</div>
+      <div class="space-x-6">
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#skills" class="hover:text-blue-600">Skills</a>
+        <a href="#projects" class="hover:text-blue-600">Projects</a>
+        <a href="#experience" class="hover:text-blue-600">Experience</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="section-bg h-screen flex flex-col justify-center items-center text-center text-white px-4">
+    <img src="assets/myimage.jpg" alt="Pradeep Shane" class="w-32 h-32 rounded-full mb-6 shadow-lg">
     <h1 class="text-5xl md:text-6xl font-bold mb-4" data-aos="fade-up">Pradeep Shane</h1>
-    <p class="text-xl md:text-2xl mb-8" data-aos="fade-up" data-aos-delay="200">Cloud & DevOps Engineer | AWS, Terraform, Jenkins, Docker</p>
-    <a href="#projects" class="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition" data-aos="fade-up" data-aos-delay="400">View My Work</a>
+    <p class="text-xl md:text-2xl mb-8" data-aos="fade-up" data-aos-delay="200">
+      Cloud & DevOps Engineer | AWS, Terraform, Jenkins, Docker, Kubernetes
+    </p>
+    <a href="#projects" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition" data-aos="fade-up" data-aos-delay="400">View My Work</a>
   </section>
 
-  <!-- About Section -->
+  <!-- ABOUT -->
   <section id="about" class="py-20 px-4 max-w-4xl mx-auto">
     <h2 class="text-3xl font-bold text-center mb-8" data-aos="fade-right">About Me</h2>
     <p class="text-lg leading-relaxed text-center" data-aos="fade-left">
-      Motivated Cloud & DevOps Engineer with hands-on experience in automating cloud infrastructure, refactoring applications, and deploying scalable systems in AWS and Azure environments. Skilled in CI/CD, Terraform, Docker, Kubernetes, and monitoring tools. Passionate about continuous learning and contributing to cloud modernization and mission-critical projects.
+      I am a Cloud & DevOps Engineer with hands-on experience in automating cloud infrastructure, refactoring applications, and deploying scalable systems on AWS and Azure. Skilled in CI/CD, Terraform, Docker, Kubernetes, Jenkins, and monitoring tools. I am passionate about learning and contributing to mission-critical cloud modernization projects.
     </p>
   </section>
 
-  <!-- Skills Section -->
+  <!-- SKILLS -->
   <section id="skills" class="py-20 bg-gray-200 px-4">
     <h2 class="text-3xl font-bold text-center mb-12" data-aos="zoom-in">Skills</h2>
     <div class="flex flex-wrap justify-center gap-8">
       <div class="flex flex-col items-center" data-aos="flip-left">
-        <img src="C:\Users\kittu\Downloads\Pradeep_Portfolio\assets\icons\aws-svgrepo-com.svg" alt="AWS" class="w-16 h-16 mb-2">
+        <img src="assets/icons/aws.svg" alt="AWS" class="w-16 h-16 mb-2">
         <p>AWS</p>
       </div>
       <div class="flex flex-col items-center" data-aos="flip-left" data-aos-delay="100">
-        <img src="C:\Users\kittu\Downloads\Pradeep_Portfolio\assets\icons\aws-svgrepo-com.svg" alt="Terraform" class="w-16 h-16 mb-2">
+        <img src="assets/icons/terraform.svg" alt="Terraform" class="w-16 h-16 mb-2">
         <p>Terraform</p>
       </div>
       <div class="flex flex-col items-center" data-aos="flip-left" data-aos-delay="200">
-        <img src="C:\Users\kittu\Downloads\Pradeep_Portfolio\assets\icons\docker-svgrepo-com.svg" alt="Docker" class="w-16 h-16 mb-2">
+        <img src="assets/icons/docker.svg" alt="Docker" class="w-16 h-16 mb-2">
         <p>Docker</p>
       </div>
       <div class="flex flex-col items-center" data-aos="flip-left" data-aos-delay="300">
-        <img src="C:\Users\kittu\Downloads\Pradeep_Portfolio\assets\icons\kubernetes-svgrepo-com.svg" alt="Kubernetes" class="w-16 h-16 mb-2">
+        <img src="assets/icons/kubernetes.svg" alt="Kubernetes" class="w-16 h-16 mb-2">
         <p>Kubernetes</p>
       </div>
       <div class="flex flex-col items-center" data-aos="flip-left" data-aos-delay="400">
@@ -81,7 +91,7 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
+  <!-- PROJECTS -->
   <section id="projects" class="py-20 px-4 max-w-6xl mx-auto">
     <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Projects</h2>
     <div class="grid md:grid-cols-2 gap-8">
@@ -104,7 +114,7 @@
     </div>
   </section>
 
-  <!-- Experience & Education Section -->
+  <!-- EXPERIENCE & EDUCATION -->
   <section id="experience" class="py-20 bg-gray-200 px-4 max-w-5xl mx-auto">
     <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Experience & Education</h2>
     <div class="space-y-6">
@@ -124,13 +134,18 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- CONTACT -->
   <section id="contact" class="py-20 px-4 max-w-4xl mx-auto text-center">
     <h2 class="text-3xl font-bold mb-8" data-aos="fade-up">Contact Me</h2>
     <p class="mb-4" data-aos="fade-up" data-aos-delay="100">Email: <a href="mailto:kittushane31@gmail.com" class="text-blue-600 hover:underline">kittushane31@gmail.com</a></p>
     <p class="mb-4" data-aos="fade-up" data-aos-delay="200">LinkedIn: <a href="https://www.linkedin.com/in/kittushane31" class="text-blue-600 hover:underline">linkedin.com/in/kittushane31</a></p>
     <p class="mb-4" data-aos="fade-up" data-aos-delay="300">GitHub: <a href="https://github.com/pradeep312000" class="text-blue-600 hover:underline">github.com/pradeep312000</a></p>
   </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-800 text-white py-6 text-center">
+    © 2025 Pradeep Shane. All rights reserved.
+  </footer>
 
   <!-- AOS JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
