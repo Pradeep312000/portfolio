@@ -1,97 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pradeep Shane | DevOps & Cloud Engineer</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pradeep Shane - Cloud & DevOps Engineer Portfolio">
+  <meta name="author" content="Pradeep Shane">
+  <meta name="keywords" content="Pradeep Shane, Cloud Engineer, DevOps, AWS, Terraform, Jenkins, Portfolio">
+  <title>Pradeep Shane</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="assets/myimage.jpg" type="image/png">
+
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    /* Parallax background for Hero */
+    .hero-bg {
+      background: url('assets/hero-bg.jpg') center/cover fixed no-repeat;
+    }
+  </style>
 </head>
-<body>
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm Pradeep Shane</h1>
-            <p>DevOps & Cloud Engineer | AWS, Azure, Docker, Kubernetes, Terraform</p>
-            <a href="#projects" class="btn">View My Work</a>
-            <a href="resume.pdf" class="btn btn-secondary" target="_blank">Download Resume</a>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Hero Section -->
+  <section class="hero-bg h-screen flex flex-col justify-center items-center text-center text-white px-4">
+    <img src="assets/myimage.jpg" alt="Pradeep Shane" class="w-32 h-32 rounded-full mb-6 shadow-xl animate-bounce">
+    <h1 class="text-5xl md:text-6xl font-bold mb-4" data-aos="fade-up">Pradeep Shane</h1>
+    <p class="text-xl md:text-2xl mb-8" data-aos="fade-up" data-aos-delay="200">Cloud & DevOps Engineer | AWS, Terraform, Jenkins, Docker</p>
+    <a href="#projects" class="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition" data-aos="fade-up" data-aos-delay="400">View My Work</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 px-4 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-8" data-aos="fade-right">About Me</h2>
+    <p class="text-lg leading-relaxed text-center" data-aos="fade-left">
+      Motivated Cloud & DevOps Engineer with hands-on experience in automating cloud infrastructure, refactoring applications, and deploying scalable systems in AWS and Azure environments. Skilled in CI/CD, Terraform, Docker, Kubernetes, and monitoring tools. Passionate about continuous learning and contributing to cloud modernization and mission-critical projects.
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 bg-gray-200 px-4">
+    <h2 class="text-3xl font-bold text-center mb-12" data-aos="zoom-in">Skills</h2>
+    <div class="flex flex-wrap justify-center gap-8">
+      <div class="flex flex-col items-center" data-aos="flip-left">
+        <img src="C:\Users\kittu\Downloads\Pradeep_Portfolio\assets\icons\aws-svgrepo-com.svg" alt="AWS" class="w-16 h-16 mb-2">
+        <p>AWS</p>
+      </div>
+      <div class="flex flex-col items-center" data-aos="flip-left" data-aos-delay="100">
+        <img src="C:\Users\kittu\Downloads\Pradeep_Portfolio\assets\icons\aws-svgrepo-com.svg" alt="Terraform" class="w-16 h-16 mb-2">
+        <p>Terraform</p>
+      </div>
+      <div class="flex flex-col items-center" data-aos="flip-left" data-aos-delay="200">
+        <img src="C:\Users\kittu\Downloads\Pradeep_Portfolio\assets\icons\docker-svgrepo-com.svg" alt="Docker" class="w-16 h-16 mb-2">
+        <p>Docker</p>
+      </div>
+      <div class="flex flex-col items-center" data-aos="flip-left" data-aos-delay="300">
+        <img src="C:\Users\kittu\Downloads\Pradeep_Portfolio\assets\icons\kubernetes-svgrepo-com.svg" alt="Kubernetes" class="w-16 h-16 mb-2">
+        <p>Kubernetes</p>
+      </div>
+      <div class="flex flex-col items-center" data-aos="flip-left" data-aos-delay="400">
+        <img src="assets/icons/jenkins.svg" alt="Jenkins" class="w-16 h-16 mb-2">
+        <p>Jenkins</p>
+      </div>
+      <div class="flex flex-col items-center" data-aos="flip-left" data-aos-delay="500">
+        <img src="assets/icons/python.svg" alt="Python" class="w-16 h-16 mb-2">
+        <p>Python</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 px-4 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Projects</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden" data-aos="fade-right">
+        <img src="assets/project1.png" alt="Project 1" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">AWS CI/CD Pipeline</h3>
+          <p class="mb-4">Built a scalable CI/CD pipeline using Jenkins, GitHub Actions, and Terraform for automated testing and deployment.</p>
+          <a href="#" class="text-blue-600 font-semibold hover:underline">View on GitHub</a>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a DevOps & Cloud Engineer with 3 years of experience building scalable infrastructure and automating CI/CD pipelines. Recently completed M.S. in Computer Science from DePaul University, Chicago. Passionate about cloud technologies and DevOps practices.</p>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-container">
-            <div class="skill"><img src="assets/icons/aws.svg" alt="AWS">AWS</div>
-            <div class="skill"><img src="assets/icons/azure.svg" alt="Azure">Azure</div>
-            <div class="skill"><img src="assets/icons/docker.svg" alt="Docker">Docker</div>
-            <div class="skill"><img src="assets/icons/terraform.svg" alt="Terraform">Terraform</div>
-            <div class="skill"><img src="assets/icons/github.svg" alt="GitHub">GitHub</div>
-            <div class="skill"><img src="assets/icons/linkedin.svg" alt="LinkedIn">LinkedIn</div>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden" data-aos="fade-left">
+        <img src="assets/project2.png" alt="Project 2" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Multi-Cloud Automation</h3>
+          <p class="mb-4">Automated AWS and Azure infrastructure provisioning using Terraform and Ansible, reducing deployment time by 40%.</p>
+          <a href="#" class="text-blue-600 font-semibold hover:underline">View on GitHub</a>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Experience Section -->
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="job">
-            <h3>Cloud & DevOps Engineer - Infosys (Mar 2022 – Jan 2023)</h3>
-            <ul>
-                <li>Designed and deployed hybrid cloud infrastructure (Azure + AWS).</li>
-                <li>Automated provisioning, patching, and compliance using Terraform, Ansible, Python, and PowerShell.</li>
-                <li>Built and maintained CI/CD pipelines using Jenkins, GitHub Actions, Azure DevOps.</li>
-            </ul>
-        </div>
-        <div class="job">
-            <h3>DevOps Engineer Intern - CloudWare Systems Pvt.ltd (Sept 2020 – Jan 2022)</h3>
-            <ul>
-                <li>Deployed Azure and AWS infrastructure using Terraform & ARM templates.</li>
-                <li>Assisted in Kubernetes orchestration (EKS) and Helm deployments.</li>
-            </ul>
-        </div>
-    </section>
+  <!-- Experience & Education Section -->
+  <section id="experience" class="py-20 bg-gray-200 px-4 max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Experience & Education</h2>
+    <div class="space-y-6">
+      <div data-aos="fade-right">
+        <h3 class="text-xl font-semibold">Infosys | Cloud & DevOps Engineer</h3>
+        <p class="text-gray-600">March 2022 - Jan 2023 | Hyderabad, India</p>
+        <ul class="list-disc list-inside">
+          <li>Designed and deployed hybrid cloud infrastructure (AWS + Azure).</li>
+          <li>Automated provisioning, patching, and compliance using Terraform and Ansible.</li>
+          <li>Built CI/CD pipelines for microservices using Jenkins and GitHub Actions.</li>
+        </ul>
+      </div>
+      <div data-aos="fade-left">
+        <h3 class="text-xl font-semibold">DePaul University | M.S. in Computer Science</h3>
+        <p class="text-gray-600">Jan 2023 – Mar 2025 | Chicago, IL</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects-container">
-            <div class="project-card">
-                <h3>Cloud Infrastructure Automation</h3>
-                <p>Automated multi-cloud provisioning using Terraform, Terragrunt, and Ansible.</p>
-            </div>
-            <div class="project-card">
-                <h3>CI/CD Pipeline & Build/Test Automation</h3>
-                <p>Built Jenkins and GitHub Actions pipelines with automated testing and deployment.</p>
-            </div>
-            <div class="project-card">
-                <h3>Monitoring & Cost Optimization</h3>
-                <p>Deployed Prometheus & Grafana for infrastructure monitoring and reduced cloud spend by 15%.</p>
-            </div>
-        </div>
-    </section>
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-4 max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-8" data-aos="fade-up">Contact Me</h2>
+    <p class="mb-4" data-aos="fade-up" data-aos-delay="100">Email: <a href="mailto:kittushane31@gmail.com" class="text-blue-600 hover:underline">kittushane31@gmail.com</a></p>
+    <p class="mb-4" data-aos="fade-up" data-aos-delay="200">LinkedIn: <a href="https://www.linkedin.com/in/kittushane31" class="text-blue-600 hover:underline">linkedin.com/in/kittushane31</a></p>
+    <p class="mb-4" data-aos="fade-up" data-aos-delay="300">GitHub: <a href="https://github.com/pradeep312000" class="text-blue-600 hover:underline">github.com/pradeep312000</a></p>
+  </section>
 
-    <!-- Education Section -->
-    <section id="education">
-        <h2>Education</h2>
-        <p>M.S. in Computer Science, DePaul University, Chicago (Jan 2023 – Mar 2025)</p>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:kittushane31@gmail.com">kittushane31@gmail.com</a></p>
-        <div class="social-icons">
-            <a href="https://github.com/pradeep312000" target="_blank"><img src="assets/icons/github.svg" alt="GitHub"></a>
-            <a href="https://www.linkedin.com/in/pradeep-shane" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
-        </div>
-    </section>
-
-    <script src="script.js"></script>
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 </html>
