@@ -1,1 +1,195 @@
-body { font-family: 'Montserrat', sans-serif; margin: 0; scroll-behavior: smooth; background-color: #000; color: #fff; } section { padding: 80px 20px; text-align: center; } /* HOME */ #home { background: url('assets/icons/8-AzG7DP0Z6zIkKPaM.gif') center/cover no-repeat; height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column; } .profile-circle { width: 150px; height: 150px; border-radius: 50%; overflow: hidden; border: 3px solid #fff; animation: float 3s ease-in-out infinite; } .profile-circle img { width: 100%; height: 100%; object-fit: cover; } @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } } h1 { margin-top: 20px; font-size: 2.5rem; } .highlight { color: #00bfff; animation: colorchange 3s infinite; } @keyframes colorchange { 0% { color: #ff007f; } 50% { color: #00bfff; } 100% { color: #ff007f; } } p { font-size: 1.2rem; } .btn { padding: 10px 25px; margin: 15px; background-color: #00bfff; color: #fff; text-decoration: none; border-radius: 5px; transition: 0.3s; } .btn:hover { background-color: #ff007f; } /* Buttons */ .btn { padding: 10px 20px; margin: 10px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 5px; } /* New Download Resume Button */ .btn-download { background: linear-gradient(45deg, #FF6B6B, #FFD93D, #6BCB77); color: white; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: transform 0.3s ease, box-shadow 0.3s ease; } .btn-download:hover { transform: translateY(-3px); box-shadow: 0 8px 15px rgba(0,0,0,0.3); } /* SKILLS */ .skills-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; } .skill { position: relative; transition: transform 0.3s; } .skill img { width: 70px; height: 70px; transition: transform 0.3s, box-shadow 0.3s; } .skill:hover img { transform: scale(1.1); box-shadow: 0 0 20px #00bfff; } .skill::after { content: attr(data-tooltip); position: absolute; bottom: -40px; left: 50%; transform: translateX(-50%); background: #111; color: #00bfff; padding: 5px 10px; border-radius: 5px; opacity: 0; transition: 0.3s; pointer-events: none; white-space: nowrap; } .skill:hover::after { opacity: 1; bottom: -55px; } /* PROJECTS */ .projects-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; } .project-card { background: #111; border-radius: 15px; padding: 25px; width: 300px; text-align: left; transition: transform 0.3s; } .project-card:hover { transform: translateY(-10px); } /* CONTACT */ .contact-info { display: flex; flex-direction: column; align-items: center; gap: 15px; } .contact-item { color: #00bfff; text-decoration: none; display: flex; align-items: center; gap: 10px; font-size: 1.1rem; transition: color 0.3s; } .contact-item img { width: 30px; height: 30px; } .contact-item:hover { color: #ff007f; }
+/* GLOBAL */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  scroll-behavior: smooth;
+  background-color: #000;
+  color: #fff;
+}
+
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* HOME */
+#home {
+  background: url('assets/icons/8-AzG7DP0Z6zIkKPaM.gif') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profile-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #fff;
+  animation: float 3s ease-in-out infinite;
+}
+
+.profile-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+h1 {
+  margin-top: 20px;
+  font-size: 2.5rem;
+}
+
+.highlight {
+  color: #00bfff;
+  animation: colorchange 3s infinite;
+}
+
+@keyframes colorchange {
+  0% { color: #ff007f; }
+  50% { color: #00bfff; }
+  100% { color: #ff007f; }
+}
+
+p { font-size: 1.2rem; }
+
+/* BUTTONS */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn,
+.btn-secondary,
+.btn-download {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  width: auto;
+}
+
+/* Colors */
+.btn { background-color: #00bfff; }
+.btn-secondary { background-color: #ff007f; }
+.btn-download { background: linear-gradient(45deg, #FF6B6B, #FFD93D, #6BCB77); border-radius: 30px; }
+
+/* Hover */
+.btn:hover,
+.btn-secondary:hover,
+.btn-download:hover { transform: translateY(-3px); transition: 0.3s; }
+
+/* SKILLS */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.skill {
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.skill img {
+  width: 70px;
+  height: 70px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #00bfff;
+}
+
+.skill::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111;
+  color: #00bfff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.3s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.skill:hover::after {
+  opacity: 1;
+  bottom: -55px;
+}
+
+/* PROJECTS */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.project-card {
+  background: #111;
+  border-radius: 15px;
+  padding: 25px;
+  width: 300px;
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.project-card:hover { transform: translateY(-10px); }
+
+/* CONTACT */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-item {
+  color: #00bfff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.contact-item img {
+  width: 30px;
+  height: 30px;
+}
+
+.contact-item:hover { color: #ff007f; }
+
+/* RESPONSIVE BUTTON FIX */
+@media (max-width: 600px) {
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn,
+  .btn-secondary,
+  .btn-download {
+    width: 80%;
+  }
+}
